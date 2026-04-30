@@ -9,18 +9,19 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream: #FAF7F2;
-      --warm-white: #FDF9F4;
-      --sage: #8A9E8C;
-      --sage-light: #B8C9BA;
-      --clay: #C4896B;
-      --clay-dark: #A8714F;
-      --charcoal: #2E2B28;
-      --text-mid: #5C5652;
-      --text-light: #8C8884;
-      --gold: #C9A96E;
-      --gold-light: #E8D5B0;
-      --border: rgba(138, 158, 140, 0.25);
+      --cream: #F7F4EE;
+      --warm-white: #FDFBF8;
+      --navy: #1B2A4A;
+      --navy-mid: #2D4270;
+      --teal: #3AADA8;
+      --teal-light: #7DCFCC;
+      --teal-dark: #2A8E8A;
+      --charcoal: #1B2A4A;
+      --text-mid: #4A5568;
+      --text-light: #8A97AA;
+      --accent: #3AADA8;
+      --accent-light: #C2EBEA;
+      --border: rgba(27, 42, 74, 0.12);
     }
 
     html { scroll-behavior: smooth; }
@@ -39,8 +40,8 @@
       position: fixed;
       inset: 0;
       background-image: 
-        radial-gradient(ellipse 80% 60% at 70% 10%, rgba(201,169,110,0.08) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 40% at 10% 80%, rgba(138,158,140,0.10) 0%, transparent 55%);
+        radial-gradient(ellipse 80% 60% at 70% 10%, rgba(58,173,168,0.09) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 10% 80%, rgba(27,42,74,0.07) 0%, transparent 55%);
       pointer-events: none;
       z-index: 0;
     }
@@ -78,7 +79,7 @@
     .brand-line {
       width: 32px;
       height: 1px;
-      background: var(--gold);
+      background: var(--teal);
     }
 
     .brand-tagline {
@@ -100,7 +101,7 @@
       font-size: 12px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--sage);
+      color: var(--teal);
       font-weight: 500;
       margin-bottom: 20px;
     }
@@ -116,7 +117,7 @@
 
     .hero-title em {
       font-style: italic;
-      color: var(--clay);
+      color: var(--teal);
     }
 
     .hero-subtitle {
@@ -142,12 +143,12 @@
     .divider-line {
       flex: 1;
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+      background: linear-gradient(90deg, transparent, var(--accent-light), transparent);
     }
 
     .divider-icon {
       font-size: 14px;
-      color: var(--gold);
+      color: var(--teal);
       letter-spacing: 4px;
     }
 
@@ -178,7 +179,7 @@
 
     .card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 16px 48px rgba(46,43,40,0.08);
+      box-shadow: 0 16px 48px rgba(27,42,74,0.10);
     }
 
     .card::before {
@@ -189,8 +190,8 @@
       border-radius: 16px 16px 0 0;
     }
 
-    .card.returning::before { background: linear-gradient(90deg, var(--sage), var(--sage-light)); }
-    .card.new::before { background: linear-gradient(90deg, var(--clay), var(--gold)); }
+    .card.returning::before { background: linear-gradient(90deg, var(--navy), var(--navy-mid)); }
+    .card.new::before { background: linear-gradient(90deg, var(--teal), var(--teal-light)); }
 
     .card-icon {
       width: 40px;
@@ -202,8 +203,8 @@
       font-size: 18px;
     }
 
-    .returning .card-icon { background: rgba(138,158,140,0.15); }
-    .new .card-icon { background: rgba(196,137,107,0.12); }
+    .returning .card-icon { background: rgba(27,42,74,0.08); }
+    .new .card-icon { background: rgba(58,173,168,0.12); }
 
     .card-label {
       font-size: 10px;
@@ -212,8 +213,8 @@
       font-weight: 500;
     }
 
-    .returning .card-label { color: var(--sage); }
-    .new .card-label { color: var(--clay); }
+    .returning .card-label { color: var(--navy); }
+    .new .card-label { color: var(--teal-dark); }
 
     .card-title {
       font-family: 'Cormorant Garamond', serif;
@@ -249,22 +250,22 @@
     }
 
     .btn-returning {
-      background: var(--sage);
+      background: var(--navy);
       color: white;
     }
 
     .btn-returning:hover {
-      background: #7A8E7C;
+      background: var(--navy-mid);
       transform: scale(1.02);
     }
 
     .btn-new {
-      background: var(--clay);
+      background: var(--teal);
       color: white;
     }
 
     .btn-new:hover {
-      background: var(--clay-dark);
+      background: var(--teal-dark);
       transform: scale(1.02);
     }
 
@@ -274,8 +275,8 @@
     .reassurance {
       margin: 40px 0;
       padding: 28px 32px;
-      background: rgba(201,169,110,0.07);
-      border: 1px solid rgba(201,169,110,0.2);
+      background: rgba(58,173,168,0.06);
+      border: 1px solid rgba(58,173,168,0.2);
       border-radius: 14px;
       text-align: center;
       animation: fadeUp 0.8s 0.45s ease both;
@@ -312,7 +313,7 @@
       transition: color 0.2s;
     }
 
-    footer a:hover { color: var(--clay); }
+    footer a:hover { color: var(--teal); }
 
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
@@ -325,7 +326,7 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(46,43,40,0.5);
+      background: rgba(27,42,74,0.55);
       backdrop-filter: blur(4px);
       z-index: 100;
       align-items: center;
@@ -372,7 +373,7 @@
       font-size: 10px;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--sage);
+      color: var(--teal-dark);
       font-weight: 500;
       margin-bottom: 12px;
     }
@@ -509,12 +510,12 @@
 
   </div>
 
-  <!-- MODAL: WhatsApp para quienes ya trabajaron con Meli -->
+  <!-- MODAL: WhatsApp para quienes ya trabajaron conmigo -->
   <div class="modal-overlay" id="waModal" onclick="closeModalOutside(event)">
     <div class="modal">
       <button class="modal-close" onclick="closeModal()">✕</button>
-      <p class="modal-label">Ya trabajamos juntas</p>
-      <h2 class="modal-title">¡Qué bueno verte de nuevo por aquí!</h2>
+      <p class="modal-label">Ya trabajamos antes</p>
+      <h2 class="modal-title">¡Qué bueno verte de nuevo por acá!</h2>
       <p class="modal-desc">
         Escribime directamente por WhatsApp y coordinamos una nueva consulta o retomamos el proceso. 
         Ya nos conocemos, así que podés ir directo al grano.
